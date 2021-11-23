@@ -1,11 +1,9 @@
-# README
+# Xote e-commerce
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+A simple e-commerce application for delivery restaurants.
 
 * Ruby version
+2.7.1p83
 
 * System dependencies
 
