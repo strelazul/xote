@@ -8,5 +8,4 @@ class Customer < ApplicationRecord
 
   validates :name, presence: true, length: { within: 5..20 }
   validates :birthday, presence: true
-  validates :email, presence: true
 end
