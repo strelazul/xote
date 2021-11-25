@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_25_070245) do
+ActiveRecord::Schema.define(version: 2021_11_25_074625) do
 
   create_table "addresses", force: :cascade do |t|
     t.string "name"
@@ -20,7 +20,9 @@ ActiveRecord::Schema.define(version: 2021_11_25_070245) do
     t.integer "city_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id", null: false
     t.index ["city_id"], name: "index_addresses_on_city_id"
+    t.index ["user_id"], name: "index_addresses_on_user_id"
   end
 
   create_table "carts", force: :cascade do |t|
@@ -50,14 +52,6 @@ ActiveRecord::Schema.define(version: 2021_11_25_070245) do
     t.index ["province_id"], name: "index_cities_on_province_id"
   end
 
-  create_table "customers", force: :cascade do |t|
-    t.string "name"
-    t.date "birthday"
-    t.string "eamial"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "order_statuses", force: :cascade do |t|
     t.string "name"
     t.string "description"
@@ -66,14 +60,14 @@ ActiveRecord::Schema.define(version: 2021_11_25_070245) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.integer "customer_id", null: false
+    t.integer "user_id", null: false
     t.integer "address_id", null: false
     t.integer "order_status_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["address_id"], name: "index_orders_on_address_id"
-    t.index ["customer_id"], name: "index_orders_on_customer_id"
     t.index ["order_status_id"], name: "index_orders_on_order_status_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -107,23 +101,35 @@ ActiveRecord::Schema.define(version: 2021_11_25_070245) do
     t.index ["product_id"], name: "index_stocks_on_product_id"
   end
 
+  create_table "user_types", force: :cascade do |t|
+    t.string "user_type"
+    t.string "description"
+    t.integer "code"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "login"
     t.string "password"
     t.integer "customer_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "eamil"
+    t.string "email"
+    t.string "first_name"
+    t.string "last_name"
+    t.date "birthday"
     t.index ["customer_id"], name: "index_users_on_customer_id"
   end
 
   add_foreign_key "addresses", "cities"
+  add_foreign_key "addresses", "users"
   add_foreign_key "carts", "orders"
   add_foreign_key "carts", "products"
   add_foreign_key "cities", "provinces"
   add_foreign_key "orders", "addresses"
-  add_foreign_key "orders", "customers"
   add_foreign_key "orders", "order_statuses"
+  add_foreign_key "orders", "users"
   add_foreign_key "products", "categories"
   add_foreign_key "stocks", "products"
   add_foreign_key "users", "customers"
