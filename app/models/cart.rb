@@ -1,3 +1,6 @@
+# Xote e-commerce
+# Paloma Brandao
+
 class Cart < ApplicationRecord
   belongs_to :order
   belongs_to :product

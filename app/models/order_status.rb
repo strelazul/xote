@@ -1,3 +1,6 @@
+# Xote e-commerce
+# Paloma Brandao
+
 class OrderStatus < ApplicationRecord
   has_many :orders
 

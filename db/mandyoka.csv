@@ -1,0 +1,91 @@
+name,price,description,stock_quantity,category,alcohol,durable_life
+Coxinha de Frango (porcao),7.95,Chicken Croquette (portion).,500,Appetizers,FALSE,5
+Coxinha de Frango (meia porcao),4.95,Chicken Croquette (half portion).,500,Appetizers,FALSE,5
+Coxinha de Frango com Catupiry (porcao),7.95,Chicken Croquette with Cream Cheese (portion).,500,Appetizers,FALSE,5
+Coxinha de Frango com Catupiry (meia porcao),4.95,Chicken Croquette with Cream Cheese (half portion).,500,Appetizers,FALSE,5
+Torresmo (porcao),9.95,Pork Crackling (portion).,500,Appetizers,FALSE,5
+Torresmo (meia porcao),5.95,Pork Crackling (half portion).,500,Appetizers,FALSE,5
+Mandioca Frita (porcao),11.95,Fried Cassava (portion).,500,Appetizers,FALSE,5
+Mandioca Frita (meia porcao),6.95,Fried Cassava (half portion).,500,Appetizers,FALSE,5
+Linguica Acebolada (porcao),13.95,Onion Sausage (portion).,500,Appetizers,FALSE,5
+Linguica Acebolada (meia porcao),7.95,Onion Sausage (half portion).,500,Appetizers,FALSE,5
+Bolinho de Bacalhau (porcao),7.95,Cod Croquette (portion).,500,Appetizers,FALSE,5
+Bolinho de Bacalhau (meia porcao),4.95,Cod Croquette (half portion).,500,Appetizers,FALSE,5
+Bolinho de Feijoada (porcao),7.95,Feijoada Croquette (portion).,500,Appetizers,FALSE,5
+Bolinho de Feijoada (meia porcao),4.95,Feijoada Croquette (half portion).,500,Appetizers,FALSE,5
+Pastel de Queijo (porcao),7.95,Fried Cheese Pastry (portion).,500,Appetizers,FALSE,5
+Pastel de Queijo (meia porcao),4.95,Fried Cheese Pastry (half portion).,500,Appetizers,FALSE,5
+Pastel de Carne (porcao),7.95,Fried Meat Pastry (portion).,500,Appetizers,FALSE,5
+Pastel de Carne (meia porcao),4.95,Fried Meat Pastry (half portion).,500,Appetizers,FALSE,5
+Pastel de Camarao (porcao),7.95,Fried Shrimp Pastry (portion).,500,Appetizers,FALSE,5
+Pastel de Camarao (meia porcao),4.95,Fried Shrimp Pastry (half portion).,500,Appetizers,FALSE,5
+Bolinha de Queijo (porcao),7.95,Fried Cheese Ball (portion).,500,Appetizers,FALSE,5
+Bolinha de Queijo (meia porcao),4.95,Fried Cheese Ball (half portion).,500,Appetizers,FALSE,5
+Caldinho de Mocoto,8.95,Calf's Foot Jelly Broth.,400,Soups,FALSE,7
+Caldinho de Feijao,8.95,Bean Soup.,400,Soups,FALSE,7
+Carne Seca com Mandioca,8.95,Dried meat broth with cassava.,400,Soups,FALSE,7
+Caldo de Frango com Milho,8.95,Chicken and corn broth.,400,Soups,FALSE,7
+Baiao de Dois,19.95,"Dried meat, rice, bacon, black beans, butter, chives, curd cheese, tomato, pepper and basil.",300,Entrees,FALSE,3
+Carreteiro,19.95,"Beef jerky, rice, mozzarella cheese, chives, pepper and basil.",300,Entrees,FALSE,3
+Galinhada,19.95,"Chicken, rice, pepper, chives and basil.",300,Entrees,FALSE,3
+Picadinho Brasileiro,19.95,"Minced beef with mushrooms, rice, onion farofa, egg, caramelized banana, pepper and basil.",300,Entrees,FALSE,3
+Costela,19.95,"Shredded ribs, cassava puree and coconut milk.",300,Entrees,FALSE,3
+Mix de Linguicas,19.95,"Sausage mix (pork, chicken and pepper), rice, curd cheese, chives, pepper and basil.",300,Entrees,FALSE,3
+Estrogonofe de Frango,19.95,"Chicken stroganoff with mushrooms, rice, shoestring potatoes, pepper and basil.",300,Entrees,FALSE,3
+Estrogonofe de Carne,19.95,"Beef stroganoff with mushrooms, rice, shoestring potatoes, pepper and basil.",300,Entrees,FALSE,3
+Frango ao Creme de Milho,19.95,"Chicken with corn cream, rice, shoestring potatoes, pepper and basil.",300,Entrees,FALSE,3
+Escondidinho,19.95,"Brazilian Shepherd's Pie. Carne de sol, rice, cassava cream, mozzarella cheese, pepper and basil.",300,Entrees,FALSE,3
+Feijoada,19.95,"Brazilian Feijoada, rice, bacon farofa, orange, kale, pepper and basil.",300,Entrees,FALSE,3
+Frango a Parmegiana,19.95,"Chicken parmigiana, rice, shoestring potatoes, pepper and basil.",300,Entrees,FALSE,3
+Bacalhoada,19.95,"Portuguese cod, rice, onion, yellow and red peppers, black olives, pepper and basil.",300,Entrees,FALSE,3
+Pudim de Leite Condensado,8.95,Condensed milk pudding,200,Desserts,FALSE,4
+Doce de Leite com Queijo,4.95,Dulce de leche with cheese,200,Desserts,FALSE,4
+Romeu e Julieta,4.95,Guava jam with cheese,200,Desserts,FALSE,4
+Brigadeiro,2.95,Chocolate candy,200,Desserts,FALSE,4
+Cajuzinho,2.95,Peanut and cashew nut candy,200,Desserts,FALSE,4
+Beijinho,2.95,Coconut candy,200,Desserts,FALSE,4
+Casadinho,2.95,"Half-brigadeiro, half milk candy",200,Desserts,FALSE,4
+Olho de Sogra,2.95,Beijinho candy with a dried plum,200,Desserts,FALSE,4
+Pe-de-Moleque,6.95,Brazilian peanut brittle,200,Desserts,FALSE,4
+Cocada,6.95,Coconut confectionery,200,Desserts,FALSE,4
+Perrier,3.95,,100,Drinks,FALSE,2
+Non-Alcoholic Beer,4.5,,100,Drinks,FALSE,2
+Bottled Water,3.5,,100,Drinks,FALSE,2
+Pop,2.5,,100,Drinks,FALSE,2
+Labatt's Lite,6.25,(4% ABV),50,Beer,TRUE,30
+Coor's Lite,6.25,(4% ABV),50,Beer,TRUE,30
+Blue Beer,6.25,(5% ABV),50,Beer,TRUE,30
+Budweiser,6.25,(5% ABV),50,Beer,TRUE,30
+Rickard's Red,6.25,(5% ABV),50,Beer,TRUE,30
+Canadian,6.25,(5% ABV),50,Beer,TRUE,30
+Alexancer Keith's,6.25,(5% ABV),50,Beer,TRUE,30
+Miller Genuien Draft,6.25,(4.7% ABV),50,Beer,TRUE,30
+Fort Garry Pale Ale,6.95,(5% ABV),50,Beer,TRUE,30
+Moosehead,6.25,(5% ABV),50,Beer,TRUE,30
+Corona,7.95,(5% ABV),50,Beer,TRUE,30
+Heineken,7.95,(5% ABV),50,Beer,TRUE,30
+Stella Artois,7.95,(5% ABV),50,Beer,TRUE,30
+Guinness Draught,8.95,(5% ABV),50,Beer,TRUE,30
+PIRASSUNUNGA – Cachaça 51,11.95,(39% ABV),25,Cachaca,TRUE,90
+YPIÓCA – Cachaça Ouro,9.25,(38% ABV),25,Cachaca,TRUE,90
+DOM TAPPARO ENGENHO - Cachaça Cabaré Ouro,25.25,(38% ABV),25,Cachaca,TRUE,90
+SANTO GRAU – Cachaça Paraty,35.25,(43% ABV),25,Cachaca,TRUE,90
+SELETA – Cachaça Seleta,19.25,(42% ABV),25,Cachaca,TRUE,90
+FAZENDA MATRONA – Cachaça Saliníssima,17.25,(40% ABV),25,Cachaca,TRUE,90
+WEBER HAUS – Cachaça Amburana,45.25,(38% ABV),25,Cachaca,TRUE,90
+DOM TAPPARO ENGENHO – Cachaça Cabaré Extra Premium,202.95,(38% ABV),4,Cachaca,TRUE,90
+FAZENDA HAVANA – Cachaça Havana,365.25,(47% ABV),2,Cachaca,TRUE,90
+CARVALHEIRA – Cachaça Tradicional,143.25,(38% ABV),0,Cachaca,TRUE,90
+ENGENHO DA CANA – Cachaça do Chefe,63.25,(40% ABV),12,Cachaca,TRUE,90
+CANARINHA – Cachaça Canarinha,88.25,(44% ABV),12,Cachaca,TRUE,90
+Bomba Burger - Capivara,9.95,"Two beef patties, tomato, lettuce, grilled onions and grilled mushrooms",50,Burgers,FALSE,1
+Bomba Burger - Avestruz,11.95,"Two chicken breasts, two eggs, tomato, lettuce, grilled onions and grilled mushrooms",50,Burgers,FALSE,1
+Bomba Burger - Hipopotamo,13.95,"Two beef patties, two wieners, two eggs, bacon, tomato, green pepper, lettuce, baby spinach, grilled onions and grilled mushrooms",30,Burgers,FALSE,1
+Bomba Burger - Rinoceronte,15.95,"Two beef patties, two chicken breasts, two eggs, bacon, tomato, green pepper, lettuce, baby spinach, grilled onions and grilled mushrooms",30,Burgers,FALSE,1
+Bomba Burger - Elefante,17.95,"Two beef patties, two pork patties, four eggs, bacon, tomato, green pepper, pickles, lettuce, baby spinach, grilled onions and grilled mushrooms",20,Burgers,FALSE,1
+Bomba Burger - Mamute,19.95,"Two beef patties, two pork patties, two chicken breasts, four eggs, bacon, tomato, green pepper, pickles, beets, lettuce, baby spinach, grilled onions and grilled mushrooms",10,Burgers,FALSE,1
+Churrasco,23.45,"Mix of beef, pork, chicken and brazilian sausages grilled to the brazilian style, cooked rice, brazilian vinagrette and farofa",20,Meats,FALSE,3
+Brazilian vinagrette (porcao),6.95,"Tomatoes, green pepper and onions finely chopped, olive oil, vinegar and salt",30,Sides,FALSE,3
+Brazilian vinagrette (meia porcao),3.95,"Tomatoes, green pepper and onions finely chopped, olive oil, vinegar and salt",30,Sides,FALSE,3
+Farofa (porcao),6.95,"Crispy bacon bits, crispy sausages and cassava flour",30,Sides,FALSE,3
+Farofa (meia porcao),3.95,"Crispy bacon bits, crispy sausages and cassava flour",30,Sides,FALSE,3

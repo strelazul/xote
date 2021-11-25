@@ -1,3 +1,6 @@
+# Xote e-commerce
+# Paloma Brandao
+
 class Stock < ApplicationRecord
   belongs_to :product
 

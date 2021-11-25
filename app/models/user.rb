@@ -1,3 +1,6 @@
+# Xote e-commerce
+# Paloma Brandao
+
 class User < ApplicationRecord
   belongs_to :customer
 

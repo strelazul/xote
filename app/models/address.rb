@@ -1,3 +1,6 @@
+# Xote e-commerce
+# Paloma Brandao
+
 class Address < ApplicationRecord
   belongs_to :city
   has_many :orders
