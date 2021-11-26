@@ -8,5 +8,5 @@ class Product < ApplicationRecord
 
   validates :name, presence: true, length: { within: 3..20 }
   validates :price, numericality: { greater_than: 0 }
-  validates :alcohol, presence: true
+  validates :alcohol, inclusion: [true, false]
 end
