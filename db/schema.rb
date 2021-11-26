@@ -138,14 +138,12 @@ ActiveRecord::Schema.define(version: 2021_11_25_195948) do
   create_table "users", force: :cascade do |t|
     t.string "login"
     t.string "password"
-    t.integer "customer_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "email"
     t.string "first_name"
     t.string "last_name"
     t.date "birthday"
-    t.index ["customer_id"], name: "index_users_on_customer_id"
   end
 
   add_foreign_key "addresses", "cities"
@@ -158,5 +156,4 @@ ActiveRecord::Schema.define(version: 2021_11_25_195948) do
   add_foreign_key "orders", "users"
   add_foreign_key "products", "categories"
   add_foreign_key "stocks", "products"
-  add_foreign_key "users", "customers"
 end
