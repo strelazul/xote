@@ -5,7 +5,7 @@ ActiveAdmin.register Cart do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  # permit_params :order_id, :product_id, :quantity, :price, :tax
+  permit_params :order_id, :product_id, :quantity, :price, :tax
   #
   # or
   #
@@ -14,5 +14,5 @@ ActiveAdmin.register Cart do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
-  
+
 end

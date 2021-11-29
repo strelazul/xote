@@ -5,7 +5,7 @@ ActiveAdmin.register City do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  # permit_params :name, :province_id
+  permit_params :name, :province_id
   #
   # or
   #
@@ -14,5 +14,5 @@ ActiveAdmin.register City do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
-  
+
 end
