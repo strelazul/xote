@@ -3,6 +3,7 @@
 
 class Address < ApplicationRecord
   belongs_to :city
+  belongs_to :user
   has_many :orders
 
   validates :line01, presence: true, length: { within: 8..50 }

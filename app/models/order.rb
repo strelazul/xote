@@ -2,8 +2,9 @@
 # Paloma Brandao
 
 class Order < ApplicationRecord
-  belongs_to :customer
+  belongs_to :user
   belongs_to :address
   belongs_to :order_status
   has_many :products, through: :carts
+  has_many :carts
 end
