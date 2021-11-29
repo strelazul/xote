@@ -9,6 +9,7 @@ require "net/http"
 Stock.destroy_all
 Product.destroy_all
 Category.destroy_all
+Address.destroy_all
 City.destroy_all
 Province.destroy_all
 
@@ -24,10 +25,11 @@ products.each do |product|
                                         price:       product["price"],
                                         alcohol:     product["alcohol"])
   new_product.save
-  stock = new_product.stocks.build(quantity:     product["stock_quantiy"],
-                                   durable_life: product["durable_life"],
-                                   made_on:      Faker::Date.backward(days: 3))
-  stock.save
+  new_stock = Stock.new(quantity:     product["stock_quantity"],
+                        durable_life: product["durable_life"],
+                        product:      Product.find_by(name: product["name"]),
+                        made_on:      Faker::Date.backward(days: 3))
+  new_stock.save
 end
 
 # Cities and province information got from https://simplemaps.com/data/canada-cities
@@ -50,4 +52,7 @@ cities.each do |city|
   new_city = province.cities.build(name: city["city"])
   new_city.save
 end
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+if Rails.env.development?
+  AdminUser.create!(email: "admin@example.com", password: "password",
+                    password_confirmation: "password")
+end
