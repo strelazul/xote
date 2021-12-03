@@ -60,3 +60,5 @@ gem "faker", "~> 2.19"
 gem "activeadmin", "~> 2.9"
 
 gem "devise", "~> 4.8"
+
+gem "image_processing", "~> 1.12"
