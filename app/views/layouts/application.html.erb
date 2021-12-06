@@ -6,12 +6,22 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield :sidebar %>
-    <%= yield %>
+    <%= render 'layouts/header' %>
+    <div class="container-fluid">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %> col-md8 col-md-offset-2 main">
+          <%= value %>
+        </div>
+      <% end %>
+      <div class="row">
+        <%= yield :sidebar %>
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>
