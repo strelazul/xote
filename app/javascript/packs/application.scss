@@ -1,5 +1,6 @@
 // Import Bootstrap v5
 @import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/variables";
 
 /* mixins, variables, etc. */
 
@@ -182,11 +183,11 @@ footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid $grayMediumLight;
-  color: $gray-light;
+  color: $gray-600;
   a {
-    color: $gray;
+    color: $gray-700;
     &:hover {
-      color: $gray-darker;
+      color: $gray-900;
     }
   }
   small {
