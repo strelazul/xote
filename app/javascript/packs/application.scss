@@ -1,6 +1,5 @@
 // Import Bootstrap v5
 @import "~bootstrap/scss/bootstrap";
-@import "~bootstrap/scss/variables";
 
 /* mixins, variables, etc. */
 
@@ -88,8 +87,8 @@ p {
 @media (min-width: 768px) {
   .sidebar {
     position: fixed;
-    top: 51px;
-    bottom: 0;
+    //top: 51px;
+    //bottom: 0;
     left: 0;
     z-index: 1000;
     display: block;
