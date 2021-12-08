@@ -8,7 +8,7 @@ class Product < ApplicationRecord
   has_many :carts
   has_one_attached :image
 
-  validates :name, presence: true, length: { within: 3..20 }
+  validates :name, presence: true, length: { within: 3..60 }
   validates :price, numericality: { greater_than_or_equal_to: 0 }
   validates :alcohol, inclusion: [true, false]
 end
