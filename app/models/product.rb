@@ -3,9 +3,9 @@
 
 class Product < ApplicationRecord
   belongs_to :category
-  has_many :stocks
+  has_many :stocks, dependent: :destroy
   has_many :orders, through: :carts
-  has_many :carts
+  has_many :carts, dependent: :destroy
   has_one_attached :image
 
   validates :name, presence: true, length: { within: 3..60 }

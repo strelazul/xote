@@ -2,7 +2,7 @@
 # Paloma Brandao
 
 class Province < ApplicationRecord
-  has_many :cities
+  has_many :cities, dependent: :destroy
 
   validates :name, presence: true, length: { within: 3..25 }
   validates :gst, numericality: { greater_than_or_euqal_to: 0 }

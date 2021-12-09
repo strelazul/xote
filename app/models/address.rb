@@ -4,7 +4,7 @@
 class Address < ApplicationRecord
   belongs_to :city
   belongs_to :user
-  has_many :orders
+  has_many :orders, dependent: :destroy
 
   validates :line01, presence: true, length: { within: 8..50 }
   validates :line02, length: { within: 0..50 }

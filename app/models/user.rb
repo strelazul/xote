@@ -2,8 +2,8 @@
 # Paloma Brandao
 
 class User < ApplicationRecord
-  has_many :orders
-  has_many :addresses
+  has_many :orders, dependent: :destroy
+  has_many :addresses, dependent: :destroy
   accepts_nested_attributes_for :addresses, allow_destroy: true
 
   validates :first_name, presence: true, length: { within: 5..20 }
