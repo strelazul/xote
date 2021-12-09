@@ -1,0 +1,19 @@
+<nav class="navbar fixed-top navbar-dark bg-dark navbar-inverse">
+  <div class="container-fluid">
+    <div>
+      <div class="navbar-brand">
+        <span><%= link_to "Xote", root_path, id: "logo" %></span>
+        <span class="beta">Beta</span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#actionMenu" aria-controls="actionMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+     <div class="collapse navbar-collapse" id="actionMenu">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><%= link_to "Shopping Cart", "#" %></li>
+          <li class="nav-item"><%= link_to "Admin", admin_root_path %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
