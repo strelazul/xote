@@ -5,6 +5,7 @@ ActiveAdmin.register Product do
                 :alcohol,
                 :category_id,
                 :image
+                :on_sale
 
   form do |f|
     f.semantic_errors
@@ -13,6 +14,7 @@ ActiveAdmin.register Product do
       f.input :image, as: :file
       f.input :description
       f.input :price
+      f.input :on_sale
       f.input :alcohol
       f.input :category
     end
@@ -31,6 +33,7 @@ ActiveAdmin.register Product do
       end
       row :description
       row :price
+      row :on_sale
       row :alcohol
     end
   end
