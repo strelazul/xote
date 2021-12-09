@@ -15,6 +15,8 @@ class Product < ApplicationRecord
   scope :new_products, -> { where("created_at >= ?", 3.days.ago) }
   scope :sale, -> { where(on_sale: true) }
   scope :search_products, lambda { |search_words|
-                   where("name LIKE ? OR description LIKE ?", "%#{sanitize_sql_like(search_words)}%", "%#{sanitize_sql_like(search_words)}%")
-                 }
+                            where("name LIKE ? OR description LIKE ?",
+                                  "%#{sanitize_sql_like(search_words)}%",
+                                  "%#{sanitize_sql_like(search_words)}%")
+                          }
 end
