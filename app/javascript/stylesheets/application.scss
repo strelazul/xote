@@ -86,13 +86,11 @@ p {
 }
 @media (min-width: 768px) {
   .sidebar {
-    position: fixed;
-    top: 51px;
     bottom: 0;
     left: 0;
     z-index: 1000;
     display: block;
-    padding: 20px;
+    padding: 5px;
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
     background-color: #f5f5f5;
@@ -144,7 +142,6 @@ input, textarea, select, .uneditable-input {
 
 .app_body {
   list-style: none;
-  margin-top: 70px;
   padding: 0;
   li {
     overflow: auto;

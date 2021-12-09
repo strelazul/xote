@@ -1,19 +1,43 @@
-<nav class="navbar fixed-top navbar-dark bg-dark navbar-inverse">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <div>
-      <div class="navbar-brand">
-        <span><%= link_to "Xote", root_path, id: "logo" %></span>
-        <span class="beta">Beta</span>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#actionMenu" aria-controls="actionMenu" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
-     <div class="collapse navbar-collapse" id="actionMenu">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><%= link_to "Shopping Cart", "#" %></li>
-          <li class="nav-item"><%= link_to "Admin", admin_root_path %></li>
-        </ul>
-      </div>
+    <span><%= link_to "Mandyoka", root_path, class: "navbar-brand", id: "logo" %></span>
+    <span class="beta">Beta</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Admin", admin_root_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Products", products_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Categories", categories_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Shopping Cart</a>
+        </li>
+<!--        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Account
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Sign in</a></li>
+            <li><a class="dropdown-item" href="#">Sign up</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><%= link_to "Log out", "#", class: "dropdown-item" %></li>
+          </ul> -->
+        </li>
+      </ul>
+      <%= form_tag(products_path, class: "d-flex", method: :get) do %>
+        <%= text_field_tag(:search, params[:search], class: "form-control me-2", placeholder: "Search", aria_label:"Search") %>
+        <%= submit_tag("Search", class: "btn btn-outline-success") %>
+      <% end %>
     </div>
   </div>
 </nav>
