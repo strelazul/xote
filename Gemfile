@@ -54,3 +54,11 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "rubocop", "~> 1.23"
 gem "rubocop-rails", "~> 2.12"
+
+gem "faker", "~> 2.19"
+
+gem "activeadmin", "~> 2.9"
+
+gem "devise", "~> 4.8"
+
+gem "image_processing", "~> 1.12"

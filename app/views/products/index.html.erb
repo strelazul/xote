@@ -1,0 +1,15 @@
+<% content_for(:sidebar) do %>
+  <%= render :partial => "layouts/sidebar" %>
+<% end %>
+<div class="d-flex flex-column justify-content-center col-md-7 offset-md-3 main">
+  <div class="row">
+    <h1>Products</h1>
+  </div>
+    <% @products.each do |product| %>
+      <div class="row">
+          Name: <%= link_to product.name, product_path(product) %>
+        <%= render "list", product: product %>
+      </div>
+      <p> &nbsp; </p>
+    <% end %>
+</div>

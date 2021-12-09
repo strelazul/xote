@@ -1,0 +1,16 @@
+<% content_for(:sidebar) do %>
+  <%= render :partial => "layouts/sidebar" %>
+<% end %>
+<div class="d-flex flex-column justify-content-center col-md-7 offset-md-3 main">
+  <div class="row">
+    <h1>Categories</h1>
+  </div>
+  <% @categories.each do |category| %>
+    <div class="row">
+      <%= link_to category.name, category_path(category) %>
+      Description: <%= category.description %>
+    </div>
+  <% end %>
+</div>>
+
+
