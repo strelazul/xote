@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <span><%= link_to "Mandyoka", root_path, class: "navbar-brand", id: "logo" %></span>
+    <span class="beta">Beta</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Admin", admin_root_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Products", products_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Categories", categories_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Shopping Cart</a>
+        </li>
+      </ul>
+      <%= form_tag(products_path, class: "d-flex", method: :get) do %>
+        <%= select_tag "category_id", options_from_collection_for_select(@categories, "id", "name"), include_blank: "All categories", id: "category_id" %>
+        <%= text_field_tag(:search, params[:search], class: "form-control me-2", placeholder: "Search") %>
+        <%= submit_tag("Search", class: "btn btn-outline-success") %>
+      <% end %>
+    </div>
+  </div>
+</nav>

@@ -1,6 +1,10 @@
 class ProductsController < ApplicationController
   def index
-    @products = Product.includes(:category).all
+    @products = if params[:search] || params[:category_id]
+                  Product.search_products(params[:search], params[:category_id])
+                else
+                  Product.includes(:category).all
+                end
   end
 
   def show
@@ -10,6 +14,6 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:id, :category_id)
+    params.require(:product).permit(:id, :name, :description, :on_sale, :search, :category_id)
   end
 end
