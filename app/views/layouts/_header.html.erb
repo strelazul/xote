@@ -22,20 +22,10 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Shopping Cart</a>
         </li>
-<!--        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Account
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Sign in</a></li>
-            <li><a class="dropdown-item" href="#">Sign up</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><%= link_to "Log out", "#", class: "dropdown-item" %></li>
-          </ul> -->
-        </li>
       </ul>
       <%= form_tag(products_path, class: "d-flex", method: :get) do %>
-        <%= text_field_tag(:search, params[:search], class: "form-control me-2", placeholder: "Search", aria_label:"Search") %>
+        <%= select_tag "category_id", options_from_collection_for_select(@categories, "id", "name"), include_blank: "All categories", id: "category_id" %>
+        <%= text_field_tag(:search, params[:search], class: "form-control me-2", placeholder: "Search") %>
         <%= submit_tag("Search", class: "btn btn-outline-success") %>
       <% end %>
     </div>
