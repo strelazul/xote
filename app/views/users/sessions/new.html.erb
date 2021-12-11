@@ -1,0 +1,26 @@
+<div class="col-md-6 order-md-3">
+  <% provide(:title, "Change your password") %>
+  <div class="center">
+    <h1>Log in</h1>
+  </div>
+  <%= form_for(resource, as: resource_name, url: user_session_path) do |f| %>
+    <div>
+      <%= f.email_field :email, autofocus: true, placeholder: "Email", :class => "form-control" %>
+    </div>
+
+    <div>
+      <%= f.password_field :password, autocomplete: "off", placeholder: "Password", :class => "form-control"  %>
+    </div>
+
+    <% if devise_mapping.rememberable? -%>
+      <div class="signin_remember_me">
+        <%= f.check_box :remember_me %> Remember me
+      </div>
+    <% end -%>
+
+    <div class="actions shared_links">
+      <%= f.submit "Log in", class: "btn btn-large btn-primary" %>
+    </div>
+    <%= render "users/shared/links" %>
+  <% end %>
+</div>
