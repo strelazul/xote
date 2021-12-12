@@ -11,6 +11,7 @@ import "@popperjs/core"
 import "bootstrap"
 import { Tooltip, Popover, Dropdown } from "bootstrap"
 require("../stylesheets/application.scss")
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
