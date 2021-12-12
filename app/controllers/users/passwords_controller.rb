@@ -12,12 +12,12 @@ module Users
 
     protected
 
-    def after_resetting_password_path_for
+    def after_resetting_password_path_for(_resource)
       root_path
     end
 
     # The path used after sending reset password instructions
-    def after_sending_reset_password_instructions_path_for
+    def after_sending_reset_password_instructions_path_for(_resource_name)
       signin_path
     end
   end

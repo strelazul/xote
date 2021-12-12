@@ -1,4 +1,5 @@
 require "active_support/core_ext/integer/time"
+# require "tlsmail"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
@@ -34,23 +35,24 @@ Rails.application.configure do
   config.active_storage.service = :local
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.perform_caching = false
 
   # Devise section
-  config.action_mailer.default_options = { from: "testxote@outlook.com" }
-  config.action_mailer.default_url_options = { host: "office365.com" }
+  Net::SMTP.enable_tls(OpenSSL::SSL::VERIFY_NONE)
+  config.action_mailer.default_options = { from: "test.mandyoka@gmail.com" }
+  config.action_mailer.default_url_options = { host: "localhost", port: 3000 }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.default charset: "utf-8"
   config.action_mailer.smtp_settings = {
     enable_starttls_auto: true,
-    address:              "smtp.office365.com",
+    address:              "smtp.gmail.com",
     port:                 587,
-    tls:                  true,
-    domain:               "smtp.office365.com",
-    user_name:            "testxote@outlook.com",
+    # tls:                  true,
+    domain:               "google.com",
+    user_name:            "test.mandyoka@gmail.com",
     password:             "M@ndy0k@",
     authentication:       :plain
   }

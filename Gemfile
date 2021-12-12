@@ -62,3 +62,5 @@ gem "activeadmin", "~> 2.9"
 gem "devise", "~> 4.8"
 
 gem "image_processing", "~> 1.12"
+
+gem "tlsmail", "~> 0.0.1"
