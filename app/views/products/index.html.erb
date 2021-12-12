@@ -1,15 +1,35 @@
 <% content_for(:sidebar) do %>
   <%= render :partial => "layouts/sidebar" %>
 <% end %>
-<div class="d-flex flex-column justify-content-center col-md-7 offset-md-3 main">
-  <div class="row">
+
+<div class="d-flex flex-column justify-content-center col-sm-9 col-md-10 main">
+  <div class="row px-5 py-2 center">
     <h1>Products</h1>
   </div>
-    <% @products.each do |product| %>
-      <div class="row">
-          Name: <%= link_to product.name, product_path(product) %>
-        <%= render "list", product: product %>
-      </div>
-      <p> &nbsp; </p>
-    <% end %>
+  <div class="row col-sm-6 col-md-6 ms-auto">
+    <details>
+      <summary>Shopping Cart</summary>
+      <% if @cart.empty? %>
+        <p>No items in cart</p>
+      <% else %>
+        <ul>
+          <% @cart.each do |product| %>
+            <li>
+              <%= product.name %> - <%= link_to "Remove from cart", remove_from_cart_path(product), method: :delete %>
+                <i class="bi bi-x-circle-fill remove"></i>
+            </li>
+          <% end %>
+        </ul>
+      <% end %>
+    </details>
+  </div>
+  <div class="row px-5">
+    <p>You have visied this site <%= pluralize @visit_count, "time" %>.</p>
+  </div>
+  <% @products.each do |product| %>
+    <div class="row px-5">
+        Name: <%= link_to product.name, product_path(product) %>
+      <%= render "list", product: product, cart: @cart %>
+    </div>
+  <% end %>
 </div>

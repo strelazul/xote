@@ -4,6 +4,11 @@
                                                                      100]).processed) %>
   <% end %>
   ID: <%= product.id %><br>
-  Price: <%= product.price %><br>
+  Price: <%= number_to_currency product.price %><br>
   Category: <%= product.category.name %>
+  <% if cart.include?(product) %>
+    <p>Product is in your cart.</p>
+  <% else %>
+    <p><%= link_to "add to cart", add_to_cart_path(product.id), method: :post %></p>
+  <% end %>
 </p>
