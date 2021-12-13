@@ -6,5 +6,5 @@ class Address < ApplicationRecord
   belongs_to :user
   has_many :orders, dependent: :destroy
 
-  validates :postal_code, length: { is: 6 }
+  validates :province, presence: true
 end

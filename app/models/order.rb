@@ -10,4 +10,7 @@ class Order < ApplicationRecord
 
   accepts_nested_attributes_for :address, allow_destroy: true
   accepts_nested_attributes_for :carts, allow_destroy: true
+
+  validates :user, presence: true
+  validates :address, presence: true
 end

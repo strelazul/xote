@@ -1,0 +1,37 @@
+<% content_for(:sidebar) do %>
+  <%= render :partial => "layouts/sidebar" %>
+<% end %>
+
+<div class="d-flex flex-column justify-content-center col-sm-9 col-md-10 main">
+  <div class="col-12 px-5 py-2 center">
+    <h1>Order checkout</h1>
+  </div>
+  <div class="d-flex col-12 px-5 py-2">
+    <div class="d-flex col-sm-12 col-md-8">
+      <% @order.carts.each do |item| %>
+        <%= render "list", item: item %>
+      <% end %>
+    </div>
+    <div class="d-flex col-sm-12 col-md-4">
+      <%= render "summary", subtotal: @order_total, order: @order %>
+      <%= form_with model: @order do |f| %>
+        <% if @order.address.nil? %>
+          <%= f.collection_select :province_id, Province.order(:name), :id, :name %>
+          <%= f.submit "Update taxes", class: "btn btn-small btn-primary", formmethod: :post, formaction: :update_taxes %>
+        <% else %>
+          <%= render "layouts/address", addr: @order.address %>
+        <% end %>
+        <%= f.submit class: "btn btn-small btn-primary" %>
+      <% end %>
+    </div>
+
+
+
+
+
+
+
+
+  </div>
+</div>
+

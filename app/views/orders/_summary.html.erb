@@ -1,0 +1,5 @@
+<div class="col-12">
+  <p>Subtotal: <%= number_to_currency(subtotal) %></p>
+  <p>Taxes: <%= number_to_currency(order.tax * subtotal) %> </p>
+  <p>Total: <%= number_to_currency((1 + order.tax) * subtotal) %></p>
+</div>
