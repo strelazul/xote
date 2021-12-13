@@ -12,6 +12,5 @@ class User < ApplicationRecord
 
   validates :first_name, presence: true, length: { within: 2..20 }
   validates :last_name, presence: true, length: { within: 2..50 }
-  validates :password, presence: true, length: { within: 8..40 }
   validates :email, presence: true
 end

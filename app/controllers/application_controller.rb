@@ -3,10 +3,12 @@ class ApplicationController < ActionController::Base
   before_action :set_categories_for_menu
 
   def after_sign_in_path_for(_resource)
-    return if session[:return_to].nil?
-
-    session[:return_to]
-    session.delete[:return_to]
+    if session[:return_to].nil?
+      edit_user_path(current_user.id)
+    else
+      session[:return_to]
+      session.delete[:return_to]
+    end
   end
 
   private
