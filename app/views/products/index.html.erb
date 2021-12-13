@@ -19,6 +19,9 @@
                 <i class="bi bi-x-circle-fill remove"></i>
             </li>
           <% end %>
+          <%= form_with url: :checkout, method: :get do |f| %>
+            <li><%= f.submit "Checkout", class: "btn btn-small btn-primary"%></li>
+          <% end %>
         </ul>
       <% end %>
     </details>
