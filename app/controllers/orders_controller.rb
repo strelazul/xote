@@ -27,10 +27,10 @@ class OrdersController < ApplicationController
   private
 
   def new_order
+    @order_total ||= 0
     @order ||= Order.new(user:         User.includes(:addresses).find(current_user.id),
                          order_status: OrderStatus.find_by(name: "New"))
-    @order.address ||= (@order.user.addresses.first unless @order.user.addresses.nil?)
-    @order_total ||= 0
+    @order.address ||= @order.user&.addresses&.first
   end
 
   def set_tax
