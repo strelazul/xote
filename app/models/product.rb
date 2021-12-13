@@ -13,6 +13,7 @@ class Product < ApplicationRecord
   validates :alcohol, inclusion: [true, false]
 
   scope :new_products, -> { where("created_at >= ?", 3.days.ago) }
+  scope :updated, -> { where("updated_at >= ?", 3.days.ago) }
   scope :sale, -> { where(on_sale: true) }
   scope :search_products, lambda { |search_words, category_id|
                             products = if category_id.present?

@@ -1,0 +1,18 @@
+
+<%= form_with model: user do |f| %>
+  <%= f.text_field :first_name, placeholder: "First name", :class => "form-control" %>
+  <%= f.text_field :last_name, placeholder: "Last name", :class => "form-control" %>
+  <%= f.text_field :email, placeholder: "Email", :class => "form-control", readonly: true %>
+
+  <% user.addresses.each do |addr| %>
+    <%= f.fields_for :addresses, addr do |af| %>
+      <%= af.text_field :name, placeholder: "Kind of address", :class => "form-control" %>
+      <%= af.text_field :line01, placeholder: "Line 1", :class => "form-control" %>
+      <%= af.text_field :line02, placeholder: "line 2", :class => "form-control" %>
+      <%= af.collection_select :province_id, Province.order(:name), :id, :name %>
+      <%= af.text_field :city, :class => "form-control" %>
+      <%= af.text_field :postal_code, placeholder: "Postal Code", :class => "form-control" %>
+    <% end %>
+  <% end %>
+  <%= f.submit class: "btn btn-large btn-primary" %>
+<% end %>
