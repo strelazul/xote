@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'order/new'
   devise_for :users,
              controllers: {
                registrations: "users/registrations",
