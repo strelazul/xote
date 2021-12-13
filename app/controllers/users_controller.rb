@@ -24,6 +24,7 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:id, :first_name, :last_name, :birthday, :email,
-                                 addresses_attributes: %i[id name line01 line02 postal_code city user_id province_id])
+                                 addresses_attributes: %i[id name line01 line02 postal_code
+                                                          city user_id province_id])
   end
 end
